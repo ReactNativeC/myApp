@@ -18,7 +18,7 @@ import {
 
 import {Header, Colors} from 'react-native/Libraries/NewAppScreen';
 
-import {Component1, Component2} from './app/MyNewScreen';
+import {CommonComponent1} from './app/Common';
 
 const App: () => React$Node = () => {
   return (
@@ -36,12 +36,7 @@ const App: () => React$Node = () => {
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-            <Component1
-                message="This is Component 1 with props passed from app.js"
-                greeting="Hello,"
-              />
-              <Component1 />
-              
+              <CommonComponent1 />
             </View>
           </View>
         </ScrollView>
