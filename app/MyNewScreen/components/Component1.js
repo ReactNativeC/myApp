@@ -1,23 +1,24 @@
 import {Text, View, StyleSheet} from 'react-native';
-import type {Node} from 'react';
-import React from 'react';
+import React, {Component} from 'react';
 
-const Component1 = (): Node => (
-  <View style={styles.description}>
-    <Text>Component1</Text>
-  </View>
-);
+export default class Component1 extends Component {
+  render() {
+    return (
+      <View>
+        <Text style={styles.description}>{this.props.message}</Text>
+      </View>
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   description: {
     flex: 1,
     alignItems: 'center',
-    flexDirection: 'row',    
+    flexDirection: 'row',
     paddingVertical: 16,
     fontWeight: '400',
     fontSize: 18,
-    color: 'black',    
+    color: 'orange',
   },
 });
-
-export default Component1;

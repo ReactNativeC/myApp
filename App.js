@@ -36,8 +36,8 @@ const App: () => React$Node = () => {
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Component1 />
-              <Component2 />
+              <Component1 message="This is Component 1 embedded into App.js" />
+              <Component2 message="This is Component 2 embedded into App.js" />
             </View>
           </View>
         </ScrollView>
