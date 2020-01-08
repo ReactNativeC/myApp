@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, Button, StyleSheet, TouchableHighlight} from 'react-native';
+import {View, Text, Button, StyleSheet, TouchableHighlight, TouchableOpacity} from 'react-native';
 
 export default class CommonComponent1 extends Component {
   onPressed() {
@@ -19,11 +19,11 @@ export default class CommonComponent1 extends Component {
               <Text>First Box</Text>
             </View>
           </TouchableHighlight>
-          <TouchableHighlight onPress={this.onPressed} style={styles.box2}>
+          <TouchableOpacity onPress={this.onPressed} style={styles.box2} activeOpacity={0.6}>
             <View>
               <Text style={styles.whiteText}>Second Box</Text>
             </View>
-          </TouchableHighlight>
+          </TouchableOpacity>
           <TouchableHighlight onPress={this.onPressed} style={styles.box3}>
             <View style={styles.box3}>
               <Text>Third Box</Text>
