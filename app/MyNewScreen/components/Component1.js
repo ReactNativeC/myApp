@@ -7,7 +7,7 @@ export default class Component1 extends Component {
     this.state = {
       message: this.props.message,
       greeting: this.props.greeting,
-      showName: false,
+      showName: true,
     };
   }
 
@@ -19,7 +19,7 @@ export default class Component1 extends Component {
   render() {
     let name = this.state.showName ? 'Noor' : '**Name is Hidden**';
     return (
-      <View>
+      <View style={styles.component}>
         <Text style={styles.description}>{this.state.message}</Text>
         <Text style={styles.description}>
           {this.state.greeting} {name}
@@ -30,6 +30,10 @@ export default class Component1 extends Component {
 }
 
 const styles = StyleSheet.create({
+  component: {
+    backgroundColor: 'lightgray',
+    marginVertical: 10,
+  },
   description: {
     flex: 1,
     alignItems: 'center',
@@ -48,3 +52,4 @@ const styles = StyleSheet.create({
     fontSize: 24,
   },
 });
+

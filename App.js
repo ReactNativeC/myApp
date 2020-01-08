@@ -18,6 +18,7 @@ import {
 
 import {Header, Colors} from 'react-native/Libraries/NewAppScreen';
 
+import {Component1, Component2} from './app/MyNewScreen';
 import {CommonComponent1} from './app/Common';
 
 const App: () => React$Node = () => {
@@ -36,7 +37,13 @@ const App: () => React$Node = () => {
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <CommonComponent1 />
+              <CommonComponent1 headerText="Common  - Instance 1" />
+              <CommonComponent1 headerText="Common  - Instance 2" />
+              <CommonComponent1 headerText="Common - Instance 3" />
+              <Component1
+                message="MyNewScreen - Component 1"
+                greeting="Hello"
+              />
             </View>
           </View>
         </ScrollView>
