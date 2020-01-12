@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     paddingVertical: 16,
     fontWeight: '400',
     fontSize: 18,
-    color: 'green',
+    color: 'red',
   },
   greeting: {
     alignItems: 'center',

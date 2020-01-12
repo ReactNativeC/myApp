@@ -37,13 +37,10 @@ const App: () => React$Node = () => {
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <CommonComponent1 headerText="Common  - Instance 1" />
-              <CommonComponent1 headerText="Common  - Instance 2" />
-              <CommonComponent1 headerText="Common - Instance 3" />
-              <Component1
-                message="MyNewScreen - Component 1"
-                greeting="Hello"
-              />
+           <Component2 />  
+              {/* <CommonComponent1 headerText="Common Comp - instance 1" />
+              <CommonComponent1 headerText="Common Comp - instance 2" />
+              <Component1 /> */}
             </View>
           </View>
         </ScrollView>
