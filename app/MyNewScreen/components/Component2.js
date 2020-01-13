@@ -12,6 +12,9 @@ export default class Component2 extends Component {
       Email: value,
     });
   }
+  onSubmit(value) {
+    console.log('submitted');
+  }
   constructor() {
     super();
     this.state = {
@@ -26,12 +29,14 @@ export default class Component2 extends Component {
           <TextInput
             placeholder={this.state.Name}
             onChangeText={value => this.onNameChanged(value)}
+            onSubmitEditing={this.onSubmit}
           />
         </View>
         <View style={styles.textInput}>
           <TextInput
             placeholder={this.state.Email}
             onChangeText={value => this.onEmailChanged(value)}
+            onSubmitEditing={this.onSubmit}
           />
         </View>
         <View>

@@ -37,7 +37,7 @@ const App: () => React$Node = () => {
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-           <Component2 />  
+            <Component2 />
               {/* <CommonComponent1 headerText="Common Comp - instance 1" />
               <CommonComponent1 headerText="Common Comp - instance 2" />
               <Component1 /> */}
