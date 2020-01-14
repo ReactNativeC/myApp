@@ -8,52 +8,22 @@ import {
 } from 'react-native';
 import React from 'react';
 
-const USERS = [
-  {
-    name: 'Smith Joe',
-    id: '1',
-  },
-  {
-    name: 'Rodrigo Ganzalez',
-    id: '2',
-  },
-  {
-    name: 'Kumar Manish',
-    id: '3',
-  },
-  {
-    name: 'Kalandar Dada',
-    id: '4',
-  },
-  {
-    name: 'David Koch',
-    id: '5',
-  },
-  {
-    name: 'Jessica Ganguly',
-    id: '6',
-  },
-  {
-    name: 'Apte Radhika',
-    id: '7',
-  },
-  {
-    name: 'Maduri Kanna',
-    id: '8',
-  },
-  {
-    name: 'Suman Kumar',
-    id: '9',
-  },
-];
+var People = [];
+for (var i = 0; i < 10; i++) {
+  People.push({
+    id: "'" + i + "'",
+    name: 'Smith ' + i,
+    imagePath: 'https://randomuser.me/api/portraits/men/' + i + '.jpg',
+  });
+}
 
-function Item({name}) {
+function Item({name, imagePath}) {
   return (
     <View style={styles.item}>
       <Image
         style={styles.image}
         source={{
-          uri: 'https://via.placeholder.com/350x150/635589/808080%20?Text=Digital.com%20C/O%20https://placeholder.com/',
+          uri: imagePath,
         }}
       />
       <Text style={styles.name}>{name}</Text>
@@ -65,8 +35,10 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
-        data={USERS}
-        renderItem={({item}) => <Item name={item.name} />}
+        data={People}
+        renderItem={({item}) => (
+          <Item name={item.name} imagePath={item.imagePath} />
+        )}
         keyExtractor={item => item.id}
       />
     </SafeAreaView>
@@ -83,6 +55,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 15,
     marginVertical: 5,
     padding: 20,
+    alignItems: 'center',
   },
   name: {
     fontSize: 24,
@@ -92,8 +65,8 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   image: {
-    width: 350,
-    height: 100,
-    resizeMode: 'cover',
+    width: 300,
+    height: 300,
+    resizeMode: 'contain',
   },
 });
