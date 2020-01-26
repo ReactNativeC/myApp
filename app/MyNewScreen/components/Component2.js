@@ -1,4 +1,4 @@
-import {Text, View, StyleSheet, TextInput, Switch, Button, Alert} from 'react-native';
+import {Text, View, StyleSheet, TextInput, Switch, Button, Alert, SafeAreaView} from 'react-native';
 import React, {Component} from 'react';
 
 export default class Component2 extends Component {
@@ -30,6 +30,7 @@ export default class Component2 extends Component {
   }
   render() {
     return (
+      <SafeAreaView>
       <View>
         <View style={styles.textInput}>
           <TextInput
@@ -71,6 +72,7 @@ export default class Component2 extends Component {
           </Text>
         </View>
       </View>
+      </SafeAreaView>
     );
   }
 }
@@ -97,6 +99,7 @@ const styles = StyleSheet.create({
     color: 'green',
   },
   container: {
+    marginTop: 50,
     flexDirection: 'row',
     alignItems: 'center',
   },

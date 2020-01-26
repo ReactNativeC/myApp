@@ -9,7 +9,9 @@ import {
 import React from 'react';
 
 var People = [];
-for (var i = 0; i < 10; i++) {
+var rndNumber = Math.floor(Math.random() * 90);
+
+for (var i = rndNumber; i < rndNumber + 10; i++) {
   People.push({
     id: "'" + i + "'",
     name: 'Smith ' + i,
